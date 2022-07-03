@@ -1,4 +1,9 @@
 {
   "name": "@voraciousdev/markdown-dataset",
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "scripts": {
+    "make": "yarn make:repos && yarn make:files",
+    "make:files": "./scripts/make/files.sh",
+    "make:repos": "./scripts/make/repos.sh"
+  }
 }
