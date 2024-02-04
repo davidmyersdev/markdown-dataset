@@ -1,9 +1,7 @@
 {
   "name": "@voraciousdev/markdown-dataset",
   "scripts": {
-    "make": "pnpm make:repos && pnpm make:files",
-    "make:files": "./scripts/make/files.sh",
-    "make:repos": "./scripts/make/repos.sh"
+    "update": "vite-node ./bin/update.ts"
   },
   "devDependencies": {
     "vite-node": "^1.2.2"
