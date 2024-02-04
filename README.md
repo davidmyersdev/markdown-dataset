@@ -1,19 +1,23 @@
-# markdown-dataset
+# `markdown-dataset`
 
-A collection of various Markdown files (READMEs) for testing purposes.
+A large dataset of markdown files for testing markdown editors, parsers, renderers, and more.
 
-## Generate files from the existing repo list
+_Note: This dataset is generated from the READMEs of the top starred repositories on GitHub that have an MIT license. Links to the original sources and licenses are included in the dataset._
 
-Note: This script relies on [`gh`](https://github.com/cli/cli) and [`jq`](https://github.com/stedolan/jq).
+## How to use this dataset
 
 ```sh
-yarn make:files
+npm install --save-dev markdown-dataset
 ```
 
-## Update the repo list
+```ts
+import testFiles from 'markdown-dataset'
 
-Note: This script relies on [`gh`](https://github.com/cli/cli) and [`jq`](https://github.com/stedolan/jq).
+const testStrings = testFiles.reduce((decodedStrings, { markdownEncoded, markdownEncoding }) => {
+  if (markdownEncoding === 'base64') {
+    decodedStrings.push(atob(markdownEncoded))
+  }
 
-```sh
-yarn make:repos
+  return decodedStrings
+}, [])
 ```
