@@ -61,4 +61,4 @@ for (let page = 1; page <= maxPages; page++) {
   }
 }
 
-await writeFile('./markdown.json', JSON.stringify(all, null, 2))
+await writeFile('./data/markdown.json', JSON.stringify(all, null, 2))
