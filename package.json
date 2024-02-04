@@ -1,5 +1,8 @@
 {
-  "name": "@voraciousdev/markdown-dataset",
+  "name": "markdown-dataset",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./data/markdown.json",
   "scripts": {
     "update": "vite-node ./bin/update.ts"
   },
